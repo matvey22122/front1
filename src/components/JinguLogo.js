@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import logo from './jingu-logo-512.png';
+import logo from '../assets/jingu-logo-512.png';
 
 const Logo = styled.img`
   position: absolute;

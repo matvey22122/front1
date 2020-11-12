@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components'
 
-import './Font.sass'
+import './assets/Font.sass'
 
-import JinguLogo from "./JinguLogo";
-import NameText from "./NameText";
-import Emoji from "./Emoji";
+import JinguLogo from "./components/JinguLogo";
+import NameText from "./components/NameText";
+import Emoji from "./components/Emoji";
 
 const Block = styled.div`
   @media (max-width: 1000px) {
