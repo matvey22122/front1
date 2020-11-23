@@ -2,28 +2,24 @@ import React from 'react'
 import styled from 'styled-components'
 
 import logo from '../assets/jingu-logo-512.png';
+import {adaptiveHeightMobile, adaptiveWidthWeb} from "../mixin";
 
 const Logo = styled.img`
-  position: absolute;
-  top: 13.4vh;
-  left: 76vw;
+  border-radius: 100vmax;
+  @media (min-width: 800px) and (min-height: 900px) {
+    position: absolute;
+    top: 13.4vh;
+    left: 76vw;
+    
+    width: ${adaptiveWidthWeb(120, 210)};
+  }
   
-  width: 11vw;
-  min-width: 130px;
-  border-radius: 6vw;
-  
-  @media (max-width: 1000px) {
+  @media (max-width: 800px), (max-height: 900px) {
     position: static;
     top: auto;
     left: auto;
     
-    width: 25vw;
-    max-width: 200px;
-    border-radius: 100vw;
-  }
-  
-  @media (max-width: 700px), (max-height: 900px) {
-    width: 56vw;
+    width: ${adaptiveHeightMobile(130, 210)};
   }
 `
 

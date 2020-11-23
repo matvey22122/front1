@@ -8,7 +8,7 @@ import NameText from "./components/NameText";
 import Emoji from "./components/Emoji";
 
 const Block = styled.div`
-  @media (max-width: 1000px) {
+  @media (max-width: 800px), (max-height: 900px) {
     margin-top: 15vh;
     display: flex;
     flex-direction: column;

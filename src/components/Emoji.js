@@ -1,31 +1,27 @@
 import React from 'react'
 import styled from 'styled-components'
+import {adaptiveHeightMobile, adaptiveWidthWeb} from "../mixin";
 
 const Smile = styled.span`
-  position: absolute;
-  left: 13vw;
-  top: 37vh;
-  
   font-style: normal;
   font-weight: 500;
   
-  font-size: 10.7vw;
-  width: 10.7vw;
-  
-  @media (min-width: 1920px) {
-    font-size: 205px;
-    width: 205px;
+  @media (min-width: 800px) and (min-height: 900px) {
+    position: absolute;
+    left: 13vw;
+    top: 37vh;
+    
+    font-size: ${adaptiveWidthWeb(60, 170)};
+    line-height: ${adaptiveWidthWeb(1, 240)};
   }
   
-  @media (max-width: 1000px) {
+  @media (max-width: 800px), (max-height: 900px) {
     position: static;
     top: auto;
     left: auto;
-  }
-  
-  @media (max-width: 700px), (max-height: 900px) {
-    width: 21vw;
-    font-size: 21vw;
+    
+    font-size: ${adaptiveHeightMobile(50, 70)};
+    line-height: ${adaptiveHeightMobile(50, 94)};
   }
     
   ::after {

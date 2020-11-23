@@ -1,31 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
+import {adaptiveHeightMobile, adaptiveWidthWeb} from "../mixin";
 
 const NameSurname = styled.span`
-  position: absolute;
-  top: 16vh;
-  left: 13vw;
-  
   font-family: 'Roboto', sans-serif;
-  font-size: 6vw;
   font-style: normal;
   font-weight: 300;
-  line-height: 7vw;
   text-align: center;
   
-  @media (min-width: 2200px) {
-  font-size: 150px;
+  @media (min-width: 800px) and (min-height: 900px) {
+    position: absolute;
+    top: 16vh;
+    left: 13vw;
+    
+    font-size: ${adaptiveWidthWeb(40, 114.894)};
+    line-height: ${adaptiveWidthWeb(50, 135)};
   }
   
-  @media (max-width: 1000px) {
+  @media (max-width: 800px), (max-height: 900px) {
     position: static;
     top: auto;
     left: auto;
-  }
-  
-  @media (max-width: 700px), (max-height: 900px) {
-    font-size: 11vw;
-    line-height: 12vw;
+    
+    font-size: ${adaptiveHeightMobile(30, 40)};
+    line-height: ${adaptiveHeightMobile(27, 47)};
   }
 `
 
