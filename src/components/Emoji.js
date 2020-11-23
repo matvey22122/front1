@@ -18,10 +18,12 @@ const Smile = styled.span`
   }
   
   @media (max-width: 1000px) {
-    position: relative;
+    position: static;
     top: auto;
     left: auto;
-    
+  }
+  
+  @media (max-width: 700px), (max-height: 900px) {
     width: 21vw;
     font-size: 21vw;
   }

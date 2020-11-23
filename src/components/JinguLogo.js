@@ -13,13 +13,17 @@ const Logo = styled.img`
   border-radius: 6vw;
   
   @media (max-width: 1000px) {
-    position: relative;
+    position: static;
     top: auto;
     left: auto;
     
-    width: 56vw;
-    max-width: 240px;
+    width: 25vw;
+    max-width: 200px;
     border-radius: 100vw;
+  }
+  
+  @media (max-width: 700px), (max-height: 900px) {
+    width: 56vw;
   }
 `
 
